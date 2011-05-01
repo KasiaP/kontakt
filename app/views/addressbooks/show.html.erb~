@@ -1,0 +1,26 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        <%= gravatar_for @addressbook %>
+        <%= @addressbook.name %>
+      </h1>
+    </td>
+    <td class="sidebar round">
+      <strong>Imie</strong> <%= @addressbook.imie %><br />
+<strong>Nazwisko</strong> <%= @addressbook.nazwisko %><br />
+<strong>Email</strong> <%= @addressbook.email %><br />
+<strong>Adres</strong> <%= @addressbook.adres %><br />
+
+      <strong>URL</strong>  <%= link_to addressbook_path(@addressbook), @addressbook %>
+    </td>
+  </tr>
+</table>
+
+<p id="notice"><%= notice %></p>
+
+
+
+
+<%= link_to 'Edit', edit_addressbook_path(@addressbook) %> |
+<%= link_to 'Back', addressbooks_path %>

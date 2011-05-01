@@ -1,0 +1,37 @@
+<%= form_for(@addressbook) do |f| %>
+  <% if @addressbook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@addressbook.errors.count, "error") %> prohibited this addressbook from being saved:</h2>
+
+      <ul>
+      <% @addressbook.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :imie %><br />
+    <%= f.text_field :imie %>
+  </div>
+  <div class="field">
+    <%= f.label :nazwisko %><br />
+    <%= f.text_field :nazwisko %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :adres %><br />
+    <%= f.text_field :adres %>
+  </div>
+  <div class="field">
+    <%= f.label :www %><br />
+    <%= f.text_field :www %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>

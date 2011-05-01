@@ -1,0 +1,10 @@
+<h1>Editing Contact</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @addressbook %> |
+<%= link_to 'Back', addressbooks_path %>
+<div>
+  <%= gravatar_for @addressbook %>
+  <a href="http://gravatar.com/emails">change</a>
+</div>

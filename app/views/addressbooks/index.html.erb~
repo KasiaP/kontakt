@@ -1,0 +1,19 @@
+<h1>Listing addressbooks</h1>
+<%= paginate @addressbooks %> 
+<ul class="users">
+  <% @addressbooks.each do |addressbook| %>
+    <li>
+      <%= gravatar_for addressbook, :size => 30 %>
+      <%= addressbook.imie %>
+      <%=  addressbook.nazwisko %>
+  <%= link_to 'Show', addressbook %></td>
+    <%= link_to 'Edit', edit_addressbook_path(addressbook) %></td>
+   <%= link_to 'Destroy', addressbook, :confirm => 'Are you sure?', :method => :delete %></td>
+
+
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'New Contact', new_addressbook_path %>

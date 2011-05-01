@@ -1,4 +1,6 @@
 Kontakt::Application.routes.draw do
+  resources :addressbooks
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
