@@ -1,0 +1,21 @@
+<p>
+<ul class="users">
+    <li>
+      <%= gravatar_for addressbook, :size => 30 %>
+      <%= addressbook.imie %>
+      <%=  addressbook.nazwisko %>
+  <%= link_to 'Show', addressbook %></td>
+    <%= link_to 'Edit', edit_addressbook_path(addressbook) %></td>
+   <%= link_to 'Destroy', addressbook, :confirm => 'Are you sure?', :method => \
+:delete %></td>
+
+
+    </li>
+</ul>
+</p>
+
+
+
+
+
+

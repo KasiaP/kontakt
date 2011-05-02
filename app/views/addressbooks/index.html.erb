@@ -1,18 +1,8 @@
-<h1>Listing addressbooks</h1> 
-<ul class="users">
-  <% @addressbooks.each do |addressbook| %>
-    <li>
-      <%= gravatar_for addressbook, :size => 30 %>
-      <%= addressbook.imie %>
-      <%=  addressbook.nazwisko %>
-  <%= link_to 'Show', addressbook %></td>
-    <%= link_to 'Edit', edit_addressbook_path(addressbook) %></td>
-   <%= link_to 'Destroy', addressbook, :confirm => 'Are you sure?', :method => :delete %></td>
+<h1>Listing addressbooks</h1>
+<div id="addressbooks">
+  <%= render :partial => 'addressbook', :collection => @addressbooks %>
+</div>
 
-
-    </li>
-  <% end %>
-</ul>
 
 <%= form_tag addressbooks_path,:remote => true, :method => :get, :id => "addressbooks_search" do %>
   <p>
@@ -25,4 +15,3 @@
   <%= paginate @addressbooks, :remote => true %>
 </div>
 <%= link_to 'New Contact', new_addressbook_path %>
-<%= paginate @addressbooks %>

@@ -1,11 +1,7 @@
-<table class="pretty">  
-  <tr>  
-    <th><%= sortable "nazwisko" %></th>  
-    <th><%= sortable "imie" %></th>    
-  </tr>  
-  <% for addressbook in @addressbooks %>  
-  <tr>  
-    <td><%= addressbook.nazwisko %></td>    
-  </tr>  
-  <% end %>  
-</table> 
+<p>
+ <b><%= addressbook.nazwisko %></b><br><%= addressbook.imie %>
+</p>
+<p class="links">
+ <%= link_to "Show", addressbook_path(addressbook) %> |
+ <%= link_to "Edit", edit_addressbook_path(addressbook) %> 
+</p>
