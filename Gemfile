@@ -7,9 +7,11 @@ gem 'simple_form'
 gem 'thin'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'kaminari'
+gem 'jquery-rails', '>=0.2.5'
+
 group :development do
   gem 'nifty-generators'
-  gem 'jquery-rails'
+  gem 'jquery-rails', '>=0.2.5' 
    gem 'faker'
   gem 'populator'
  gem 'wirble'

@@ -1,0 +1,4 @@
+// render _addressbook.html.erb partial
+$("#addressbooks").html("<%= escape_javascript(render(@addressbooks)) %>");
+// modify pagination links
+$('#paginator').html('<%= escape_javascript(paginate(@addressbooks, :remote => true).to_s) %>');

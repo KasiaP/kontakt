@@ -92,7 +92,7 @@ DEPENDENCIES
   faker
   gravatar_image_tag (= 1.0.0.pre2)
   hirb
-  jquery-rails
+  jquery-rails (>= 0.2.5)
   kaminari
   nifty-generators
   populator

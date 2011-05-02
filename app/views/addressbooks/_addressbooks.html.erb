@@ -1,0 +1,11 @@
+<table class="pretty">  
+  <tr>  
+    <th><%= sortable "nazwisko" %></th>  
+    <th><%= sortable "imie" %></th>    
+  </tr>  
+  <% for addressbook in @addressbooks %>  
+  <tr>  
+    <td><%= addressbook.nazwisko %></td>    
+  </tr>  
+  <% end %>  
+</table> 

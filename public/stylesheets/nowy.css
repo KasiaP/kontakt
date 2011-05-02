@@ -119,7 +119,7 @@ nav.pagination {
  padding: 0 0.7em;
   white-space: nowrap;
 
-  background: #FF99CC;
+  background: white;
 }
 nav.pagination a, nav.pagination .page.current {
   padding: 4px;

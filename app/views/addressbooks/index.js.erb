@@ -1,0 +1,2 @@
+$("#addressbooks").html("<%= escape_javascript(render(@addressbooks)) %>");
+$('#paginator').html('<%= escape_javascript(paginate(@addressbooks, :remote => true).to_s) %>');

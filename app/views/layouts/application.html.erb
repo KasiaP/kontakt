@@ -6,6 +6,7 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
  <%= stylesheet_link_tag 'nowy', :media => 'screen' %>
+<%= auto_discovery_link_tag(:atom, addressbooks_path(:atom)) %>
   </head>
   <body>
     <div class="container">

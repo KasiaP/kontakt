@@ -1,11 +1,13 @@
 class AddressbooksController < ApplicationController
- respond_to :html, :xml
+ respond_to :html, :xml, :atom, :js
   # GET /addressbooks
   # GET /addressbooks.xml
   def index
   # @addressbooks = Addressbook.all   
-  @addressbooks = Addressbook.order(:nazwisko).page(params[:page]).per(5)
-    respond_with(@addressbooks)
+ @addressbooks = Addressbook.search(params[:search]).order(:nazwisko).page(params[:page]).per(4)
+  respond_with(@addressbooks)
+ # @addressbooks = Addressbook.order(:nazwisko).page(params[:page]).per(5)
+  #  respond_with(@addressbooks)
   
 end
 
